@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/qt/qml/Instrument_cluster">
+    <file alias="qmldir">/home/ahsan/Documents/Automotive-Software-Engineering-Project/Digital_Cockpit/QT/Instrument_cluster/Instrument_cluster/qmldir</file>
+  </qresource>
+</RCC>
+

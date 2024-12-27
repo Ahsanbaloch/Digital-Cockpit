@@ -1,0 +1,24 @@
+package org.example.canservice
+
+interface CANService {
+	version 
+	{
+		major 1 
+		minor 0
+	}
+	method getCANData
+	{
+		out 
+		{
+			UInt32 id
+			ByteBuffer data
+		}
+	}
+	broadcast  onCANDataReceived {
+		out 
+		{
+			UInt32 id
+			ByteBuffer data
+		}
+	}
+}

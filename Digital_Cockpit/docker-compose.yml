@@ -1,0 +1,59 @@
+services:
+  speed_feeder:
+    build:
+      context: ./speedo_feeder
+      dockerfile: Dockerfile
+    devices:
+      - "/dev/net/tun:/dev/net/tun"
+    # environment:
+    #   - VCAN_TARGET_PORT=6002
+    # ports:
+    # - "6001:6000"
+    cap_add:
+      - NET_ADMIN
+    network_mode: host
+    # networks:
+    #   - someip_network
+    tty: true
+    stdin_open: true
+  
+  # to run speed feeder 
+  # docker compose build speed_feeder
+  # docker compose run --rm -it speed_feeder
+
+  #before starting the docker, run this
+  #xhost +local:docker
+
+  someip_server:
+    build:
+      context: .
+      dockerfile: ./IPC_Service/Dockerfile
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+    #   - VCAN_TARGET_PORT=6001
+    ports:
+      - "30490:30490" # Default vsomeip port for Service Discovery
+      # - "6001:6000"
+      # - "30500:30500" # Additional port for your service, if needed
+    working_dir: /app
+    # command: ./server_script.sh && tail -f /dev/null
+    volumes:
+      - ./IPC_Srvice/Library_installation:/app/Library_installation
+      - ./IPC_Service/middleware:/app/middleware
+      - ./IPC_Service/Service:/app/Service
+      - ./IPC_Service:/app/IPC_Service
+      - /usr/local/lib/cmake:/usr/local/lib/cmake
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /tmp/.docker.xauth:/tmp/.docker.xauth
+    # networks:
+    #   - someip_network
+    network_mode: host
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - "/dev/net/tun:/dev/net/tun"
+    
+# networks:
+#   someip_network:
+#     driver: host

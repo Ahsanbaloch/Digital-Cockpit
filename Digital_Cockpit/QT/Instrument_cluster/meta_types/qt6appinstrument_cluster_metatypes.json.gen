@@ -1,0 +1,52 @@
+[
+    {
+        "classes": [
+            {
+                "className": "vcan",
+                "lineNumber": 18,
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "name": "framePayload",
+                        "notify": "framePayloadChanged",
+                        "read": "framePayload",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "int",
+                        "user": false
+                    }
+                ],
+                "qualifiedClassName": "vcan",
+                "signals": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "name": "framePayloadChanged",
+                        "returnType": "void"
+                    }
+                ],
+                "slots": [
+                    {
+                        "access": "private",
+                        "index": 1,
+                        "name": "clearSpeedBuffer",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "vcan.h",
+        "outputRevision": 68
+    }
+]

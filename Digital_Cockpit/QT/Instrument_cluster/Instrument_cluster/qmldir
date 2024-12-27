@@ -1,0 +1,5 @@
+module Instrument_cluster
+typeinfo appInstrument_cluster.qmltypes
+prefer :/qt/qml/Instrument_cluster/
+Main 1.0 Main.qml
+

@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_appInstrument_cluster_FILE /home/ahsan/Documents/Automotive-Software-Engineering-Project/Digital_Cockpit/QT/Instrument_cluster/appInstrument_cluster)
+set(__QT_DEPLOY_TARGET_appInstrument_cluster_TYPE EXECUTABLE)

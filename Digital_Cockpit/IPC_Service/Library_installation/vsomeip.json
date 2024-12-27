@@ -1,0 +1,33 @@
+{
+    "applications": [
+        {
+            "name": "CANService",
+            "id": "0x1234",
+            "unicast": "160.48.199.99",
+            "services": [
+                {
+                    "service": "4660",
+                    "instance": "0x5678",
+                    "methods": [
+                        {
+                            "method": "3000",
+                            "reliability": "reliable"
+                        }
+                    ],
+                    "events": [
+                        {
+                            "event": "33000",
+                            "reliability": "unreliable"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "service-discovery": {
+        "enable": true
+    },
+    "logging": {
+        "level": "debug"
+    }
+}
