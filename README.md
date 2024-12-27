@@ -10,6 +10,10 @@ The primary objective of this project is to simulate and design a comprehensive 
 ## Virtual CAN Communication
 - Implement a virtual Controller Area Network (CAN) to enable seamless data transfer between the speed sensor and the instrument cluster.
 
+# Architeture of the Project
+![Banner Image](https://github.com/Ahsanbaloch/Digital-Cockpit/blob/main/assets/Structure%20Cockpit.png)
+
+
 # Speed Feeder
 
 ## key Features
