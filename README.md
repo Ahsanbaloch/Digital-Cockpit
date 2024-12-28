@@ -64,4 +64,5 @@ Build and run the Instrument Cluster:
 ```
 docker compose up --build someip_server
 ```
+![Video Preview](assets/video.mp4)
 
