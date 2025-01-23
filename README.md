@@ -64,6 +64,20 @@ Build and run the Instrument Cluster:
 ```
 docker compose up --build someip_server
 ```
+
+### Makefile
+I have added the makefile so you can run containers
+```
+make run
+```
+remove 
+```
+make clean
+```
+remove the volume
+```
+make fclean
+```
 ## Video demonstration
 
 Check out the video demonstration on [LinkedIn](https://www.linkedin.com/feed/update/urn:li:ugcPost:7278751322311454720/).
